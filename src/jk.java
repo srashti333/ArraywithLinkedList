@@ -170,7 +170,7 @@ public class jk
                     break;
                 case 2:
                     obj.insertatLast(new Node1(s.nextInt()));
-                    obj.display();\
+                    obj.display();
                     break;
                 case 3:
                     obj.insertatpostion(s.nextInt(), new Node1(s.nextInt()));
