@@ -107,7 +107,6 @@ class DoubllyLList
         }
         temp.next.next.previous=temp;
         temp.next=temp.next.next;
-        reversedisplay();
     }
 
     public void delete()
