@@ -96,7 +96,7 @@ class DoubllyLList
     public void deletefrompos(int pos)
     {
         Node1 temp=head;
-        for(int i=0;i<pos-1;i++)
+        for(int i=0;i<pos-2;i++)
         {
             temp=temp.next;
         }
@@ -150,18 +150,19 @@ public class jk
                 press <1> for inseting node at the beginning
                 press<2> for inserting node at the last
                 press <3> for inserting at specific position
-                press <4> for deleting node at the beginning\s
+                press <4> for deleting node at the beginning
                 press<5> for deleting node at the last
                 press <6> for deleting at specific position
                 press <7> to display the data of linked list
                 press <8> to display in reverse
                 """);
         Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
+
         DoubllyLList obj=new DoubllyLList();
         char ch='y';
         while(ch=='y'|| ch=='Y')
         {
+            int n=s.nextInt();
             switch (n)
             {
                 case 1:
