@@ -167,25 +167,33 @@ public class jk
                 case 1:
                     obj.insertatbeggning(new Node1(s.nextInt()));
                     obj.display();
+                    break;
                 case 2:
                     obj.insertatLast(new Node1(s.nextInt()));
-                    obj.display();
+                    obj.display();\
+                    break;
                 case 3:
                     obj.insertatpostion(s.nextInt(), new Node1(s.nextInt()));
                     obj.display();
+                    break;
                 case 4:
                     obj.deletefrombegnning();
                     obj.display();
+                    break;
                 case 5:
                     obj.deletefromlast();
                     obj.display();
+                    break;
                 case 6:
                     obj.deletefrompos(s.nextInt());
                     obj.display();
+                    break;
                 case 7:
                     obj.display();
+                    break;
                 case 8:
                     obj.reversedisplay();
+                    break;
                 default:
                     System.out.println("invalid input");
             }
