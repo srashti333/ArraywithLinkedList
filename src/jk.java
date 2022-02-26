@@ -95,13 +95,41 @@ class DoubllyLList
 
     public void deletefrompos(int pos)
     {
+        if(head==null)
+        {
+            System.out.println("empty");
+        }
         Node1 temp=head;
+        Node1 previous=null;
         for(int i=0;i<pos-2;i++)
         {
             temp=temp.next;
         }
-        temp.next.next.previous=temp.next;
+        temp.next.next.previous=temp;
         temp.next=temp.next.next;
+        reversedisplay();
+    }
+
+    public void delete()
+    {
+        if(head==null)
+        {
+            System.out.println("empty");
+        }
+        else
+        {
+            Node1 temp=head;
+            Node1 previous=null;
+            while(temp.next!=null)
+            {
+                previous=temp;
+                temp=temp.next;
+            }
+            if(temp==head)
+            {
+                head=null;
+            }
+        }
     }
 
     public void display()
