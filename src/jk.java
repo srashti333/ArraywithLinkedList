@@ -55,9 +55,7 @@ class DoubllyLList
         }
         newnode.previous=temp;
         newnode.next=temp.next;
-        temp=temp.next;
-        temp.previous=newnode;
-        temp=newnode.previous;
+        temp.next.previous=newnode;
         temp.next=newnode;
     }
     public void deletefrombegnning()
@@ -131,6 +129,23 @@ class DoubllyLList
         }
     }
 
+    public void countNodes()
+    {
+        if(head==null)
+        {
+            System.out.println("empty 0 nodes");
+            return;
+        }
+        int c=0;
+        Node1 temp=head;
+        while(temp!=null)
+        {
+            temp=temp.next;
+            c++;
+        }
+        System.out.println(c);
+    }
+
     public void display()
     {
         if(head==null)
@@ -182,6 +197,7 @@ public class jk
                 press <6> for deleting at specific position
                 press <7> to display the data of linked list
                 press <8> to display in reverse
+                press <9> to count the no. of nodes
                 """);
         Scanner s=new Scanner(System.in);
 
@@ -221,6 +237,9 @@ public class jk
                     break;
                 case 8:
                     obj.reversedisplay();
+                    break;
+                case 9:
+                    obj.countNodes();
                     break;
                 default:
                     System.out.println("invalid input");

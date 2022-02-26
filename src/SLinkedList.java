@@ -4,7 +4,7 @@ import java.util.Scanner;
 class Node
 {
     int data;
-    Node next;       //self referential structure to hold the reference of the next element of the same type.
+    Node next;//self referential structure to hold the reference of the next element of the same type.
     public Node(int data)
     {
         this.data=data;
@@ -113,7 +113,8 @@ class SinglyLinkedList
         }
     }
 }
-public class SLinkedList {
+public class SLinkedList
+{
     public static void main(String[] args)
     {
         System.out.println("press <1> for inseting node at the beginning\n" +
@@ -123,11 +124,11 @@ public class SLinkedList {
                 "press<5> for deleting node at the last\n" +
                 "press <6> for deleting at specific position\n" +
                 "press <7> to display the data of linked list\n");
-        Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
-        SinglyLinkedList obj=new SinglyLinkedList();
-        char ch='y';
-        while(ch=='y'|| ch=='Y')
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        SinglyLinkedList obj = new SinglyLinkedList();
+        char ch = 'y';
+        while (ch == 'y' || ch == 'Y')
         {
             switch (n)
             {
@@ -155,7 +156,10 @@ public class SLinkedList {
                     System.out.println("invalid input");
             }
             System.out.println("wanna perfor any other operation enter 'y' else enter 'n'");
-            ch=s.next().charAt(0);
+            ch = s.next().charAt(0);
+
         }
-    }
+    };
 }
+
+
